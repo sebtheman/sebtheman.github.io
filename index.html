@@ -1,55 +1,100 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <script data-ad-client="ca-pub-7829323999942469" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        <script>
-            function includeHTML() {
-              var z, i, elmnt, file, xhttp;
-              /* Loop through a collection of all HTML elements: */
-              z = document.getElementsByTagName("*");
-              for (i = 0; i < z.length; i++) {
-                elmnt = z[i];
-                /*search for elements with a certain atrribute:*/
-                file = elmnt.getAttribute("w3-include-html");
-                if (file) {
-                  /* Make an HTTP request using the attribute value as the file name: */
-                  xhttp = new XMLHttpRequest();
-                  xhttp.onreadystatechange = function() {
-                    if (this.readyState == 4) {
-                      if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-                      if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
-                      /* Remove the attribute, and call this function once more: */
-                      elmnt.removeAttribute("w3-include-html");
-                      includeHTML();
-                    }
-                  }
-                  xhttp.open("GET", file, true);
-                  xhttp.send();
-                  /* Exit the function: */
-                  return;
-                }
-              }
-            }
-        </script>
-        <script>
-          function myFunction() {
-            var x = document.getElementById("myTopnav");
-            if (x.className === "topnav") {
-              x.className += " responsive";
-            } else {
-              x.className = "topnav";
+<head>
+  <script data-ad-client="ca-pub-7829323999942469" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+    function includeHTML() {
+      var z, i, elmnt, file, xhttp;
+      /* Loop through a collection of all HTML elements: */
+      z = document.getElementsByTagName("*");
+      for (i = 0; i < z.length; i++) {
+        elmnt = z[i];
+        /*search for elements with a certain atrribute:*/
+        file = elmnt.getAttribute("w3-include-html");
+        if (file) {
+          /* Make an HTTP request using the attribute value as the file name: */
+          xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = function() {
+            if (this.readyState == 4) {
+              if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+              if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+              /* Remove the attribute, and call this function once more: */
+              elmnt.removeAttribute("w3-include-html");
+              includeHTML();
             }
           }
-        </script>
-    </head>
-    <header>
+          xhttp.open("GET", file, true);
+          xhttp.send();
+          /* Exit the function: */
+          return;
+        }
+      }
+    }
+  </script>
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+  </script>
+</head>
+<header>
+  <style>
+    * {
+        box-sizing: border-box;
+      }
 
-    </header>
-    <body>
-        <center><h1>Sebastian's Websites</h1></center>
-        <div w3-include-html="https://sebtheman.github.io/homepage-top-nav-bar.html"></div>
-        <script>
-            includeHTML();
-        </script>
-    </body>
+    /* Create three equal columns that floats next to each other */
+    .column {
+      float: left;
+      width: 100%;
+      padding: 30px;
+    }
+
+    /* Clear floats after the columns */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    /* Responsive layout - when the screen is less than 600px wide, make the three columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 600px) {
+      .column {
+        width: 100%;
+      }
+    }
+    .kovidcolumn {
+      background-image: url("https://sebtheman.github.io/kovid-is-mad-sussy/30mbkovid.gif");
+      float: left;
+      width: 100%;
+      padding: 30px;
+      background-size: 100px 180px;
+    }
+  </style>
+</header>
+<body>
+  <center><h1>Sebastian's Websites</h1></center>
+  <div w3-include-html="https://sebtheman.github.io/homepage-top-nav-bar.html"></div>
+  <div class="row">
+    <div class="kovidcolumn">
+      <h2 style="color: white;background-color:black;width: 25%;"><a href="https://sebtheman.github.io/kovid-is-mad-sussy">Kovid Is Mad Sussy Website</a></h2>
+      <p style="color: white;background-color: black;width: 50%;">Click here to go to the page that shows how mad sussy Kovid is, and how not mad sussy Sebastian is</p>
+    </div>
+    <div class="column" style="background-color:#bbb;">
+      <h2>Column 2</h2>
+      <p>Some text..</p>
+    </div>
+    <div class="column" style="background-color:#ccc;">
+      <h2>Column 3</h2>
+      <p>Some text..</p>
+    </div>
+  </div>
+  <script>
+      includeHTML();
+  </script>
+</body>
 </html>
