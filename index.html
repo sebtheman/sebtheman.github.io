@@ -2,45 +2,6 @@
 <html>
 <head>
   <script data-ad-client="ca-pub-7829323999942469" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-  <script>
-    function includeHTML() {
-      var z, i, elmnt, file, xhttp;
-      /* Loop through a collection of all HTML elements: */
-      z = document.getElementsByTagName("*");
-      for (i = 0; i < z.length; i++) {
-        elmnt = z[i];
-        /*search for elements with a certain atrribute:*/
-        file = elmnt.getAttribute("w3-include-html");
-        if (file) {
-          /* Make an HTTP request using the attribute value as the file name: */
-          xhttp = new XMLHttpRequest();
-          xhttp.onreadystatechange = function() {
-            if (this.readyState == 4) {
-              if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-              if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
-              /* Remove the attribute, and call this function once more: */
-              elmnt.removeAttribute("w3-include-html");
-              includeHTML();
-            }
-          }
-          xhttp.open("GET", file, true);
-          xhttp.send();
-          /* Exit the function: */
-          return;
-        }
-      }
-    }
-  </script>
-  <script>
-    function myFunction() {
-      var x = document.getElementById("myTopnav");
-      if (x.className === "topnav") {
-        x.className += " responsive";
-      } else {
-        x.className = "topnav";
-      }
-    }
-  </script>
 </head>
 <header>
   <style>
@@ -78,7 +39,6 @@
 </header>
 <body>
   <center><h1>Sebastian's Websites</h1></center>
-  <div w3-include-html="https://sebtheman.github.io/homepage-top-nav-bar.html"></div>
   <div class="row">
     <div class="kovidcolumn">
       <h2 style="color: white;background-color:black;width: 25%;"><a href="https://sebtheman.github.io/kovid-is-mad-sussy">Kovid Is Mad Sussy Website</a></h2>
@@ -93,8 +53,5 @@
       <p>Some text..</p>
     </div>
   </div>
-  <script>
-      includeHTML();
-  </script>
 </body>
 </html>
