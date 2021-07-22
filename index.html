@@ -16,9 +16,6 @@
 </head>
 <header>
   <style>
-    a:visited {
-      color: pink;
-    }
     * {
         box-sizing: border-box;
       }
@@ -181,56 +178,242 @@
     .school_work span {
       background-color: black;
     }
-    a {
-      color: #00fbff
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
     }
+    body {
+      display: grid;
+    }
+    /*Card code*/
+    .card-meme_soundboard {
+      max-width: 50ch;
+      padding: clamp(1.5rem, 20vh, 10rem) 0 0;
+      background-image: url(https://github.com/sebtheman/memes-website/raw/master/docs/images/pepe.jpeg);
+      background-size: cover;
+      color: white;
+      box-shadow: 0 1em 2em rgb(0 0 0 / 0.2);
+      transition: transform ease 250ms;
+      border-radius: 0.5rem;
+      overflow: hidden;
+    }
+
+    .card-meme_soundboard:hover {
+      transform: scale(1.05);
+    }
+
+    .card-body {
+      padding: 1.5rem;
+      background: linear-gradient(
+        rgb(0 0 0 / 0),
+        rgb(0 0 0 / 0.25) 15%,
+        rgb(0 0 0 / 1)
+      );
+    }
+
+    .card-body p {
+      color: hsl(0deg 50% 100% / 0.8);
+      margin-bottom: 1.25em;
+    }
+
+    @media (hover: hover), (prefers-reduced-motion: no-preference) {
+      .card-body {
+        transform: translateY(60%);
+        transition: transform 500ms ease;
+      }
+
+      .card-meme_soundboard:hover .card-body {
+        transform: translateY(0);
+        transition-delay: 500ms;
+      }
+
+      .card-body > *:not(.card-title) {
+        opacity: 0;
+        transition: opacity 1200ms linear 400ms;
+      }
+
+      .card-meme_soundboard:hover .card-body > *:not(.card-title) {
+        opacity: 1;
+      }
+
+      .card-title::after {
+        content: "";
+        position: absolute;
+        left: -1.5rem;
+        top: 100%;
+        height: 3px;
+        width: calc(100% + 1.5rem);
+        background: hsl(142 90% 61%);
+        transform: scaleX(0);
+        transition: transform 200ms ease;
+        transform-origin: left;
+      }
+
+      .card-meme_soundboard:hover .card-title::after {
+        transition: transform 500ms ease;
+        transform: scaleX(1);
+      }
+    }
+
+    .button {
+      cursor: pointer;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      display: inline-block;
+      text-decoration: none;
+      color: black;
+      background: hsl(142 90% 61%);
+      padding: 0.5em 1.25em;
+      border-radius: 0.25rem;
+    }
+
+    .button:hover {
+      background: white;
+    }
+    .card-title {
+      position: relative;
+      width: max-content;
+    }
+    .cards {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+
+    .card-mechatronics_assignment {
+      max-width: 50ch;
+      padding: clamp(1.5rem, 20vh, 10rem) 0 0;
+      background-image: url(https://github.com/sebtheman/mechatronics-transistor-assignment/raw/master/docs/transistor_homepage.jpeg);
+      background-size: 200px;
+      color: white;
+      box-shadow: 0 1em 2em rgb(0 0 0 / 0.2);
+      transition: transform ease 250ms;
+      border-radius: 0.5rem;
+      overflow: hidden;
+    }
+
+    .card-mechatronics_assignment:hover {
+      transform: scale(1.05);
+    }
+    @media (hover: hover), (prefers-reduced-motion: no-preference) {
+        .card-mechatronics_assignment:hover .card-body {
+        transform: translateY(0);
+        transition-delay: 500ms;
+      }
+
+      .card-mechatronics_assignment:hover .card-body > *:not(.card-title) {
+        opacity: 1;
+      }
+
+      .card-mechatronics_assignment:hover .card-title::after {
+        transition: transform 500ms ease;
+        transform: scaleX(1);
+      }
+    }
+
+
+    .card-social-studies-assignment {
+      max-width: 50ch;
+      padding: clamp(1.5rem, 20vh, 10rem) 0 0;
+      background-image: url(https://github.com/sebtheman/social-studies-assignment/raw/main/docs/images/hitler.jpeg);
+      background-size: cover;
+      color: white;
+      box-shadow: 0 1em 2em rgb(0 0 0 / 0.2);
+      transition: transform ease 250ms;
+      border-radius: 0.5rem;
+      overflow: hidden;
+    }
+
+    .card-social-studies-assignment:hover {
+      transform: scale(1.05);
+    }
+    @media (hover: hover), (prefers-reduced-motion: no-preference) {
+      .card-social-studies-assignment:hover .card-body {
+        transform: translateY(0);
+        transition-delay: 500ms;
+      }
+
+      .card-social-studies-assignment:hover .card-body > *:not(.card-title) {
+        opacity: 1;
+      }
+
+      .card-social-studies-assignment:hover .card-title::after {
+        transition: transform 500ms ease;
+        transform: scaleX(1);
+      }
+    }
+
+
+    .card-digital-technologies-work {
+      max-width: 50ch;
+      padding: clamp(1.5rem, 20vh, 10rem) 0 0;
+      background-image: url(https://github.com/sebtheman/school-work/raw/main/codeimage.jpg);
+      background-size: cover;
+      color: white;
+      box-shadow: 0 1em 2em rgb(0 0 0 / 0.2);
+      transition: transform ease 250ms;
+      border-radius: 0.5rem;
+      overflow: hidden;
+    }
+
+    .card-digital-technologies-work:hover {
+      transform: scale(1.05);
+    }
+    @media (hover: hover), (prefers-reduced-motion: no-preference) {
+      .card-digital-technologies-work:hover .card-body {
+        transform: translateY(0);
+        transition-delay: 500ms;
+      }
+
+      .card-digital-technologies-work:hover .card-body > *:not(.card-title) {
+        opacity: 1;
+      }
+
+      .card-digital-technologies-work:hover .card-title::after {
+        transition: transform 500ms ease;
+        transform: scaleX(1);
+      }
+    }
+    /*End of card code*/
   </style>
 </header>
 <body>
   <center><h1>Sebastian's Websites</h1></center>
-  <div class="row">
-    <!--
-    <div class="kovidcolumn">
-      <div class="kovidmadsussylinktext">
-        <h2><a href="https://sebtheman.github.io/aden-is-mad-sussy"><span>Kovid Is Not Mad Sussy Website</span></a></h2>
-      </div>
-      <div class="kovidmadsussytext">
-        <p><span>Click here to go to the page that shows how not mad sussy Kovid is, and how not mad sussy Sebastian is</span></p>
+  <div class="cards">
+    <div class="card-meme_soundboard">
+      <div class="card-body">
+        <h2 class="card-title">Sebastian's Meme Soundboard</h2>
+        <p>Click here to hear the amazing memes on Sebastian's Meme Soundboard.</p>
+        <a href="https://sebtheman.github.io/memes-website/" class="button">Click here</a>
       </div>
     </div>
-    <div class="adencolumn">
-      <div class="adenmadsussylinktext">
-        <h2><a href="https://sebtheman.github.io/aden-is-mad-sussy"><span>Aden Is Mad Sussy Website</span></a></h2>
-      </div>
-      <div class="adenmadsussytext">
-        <p><span>Click here to go to the page that shows how mad sussy Aden is, and how not mad sussy Sebastian is</span></p>
-      </div>
-    </div>
-    </div>
-    <div class="chriscolumn">
-      <div class="chrismadsussylinktext">
-        <h2><a href="https://sebtheman.github.io/chris-is-mad-sussy"><span>Chris Is Mad Sussy Website</span></a></h2>
-      </div>
-      <div class="chrismadsussytext">
-        <p><span>Click here to go to the page that shows how mad sussy Chris is, and how not mad sussy Sebastian is</span></p>
+    <br>
+    <div class="card-mechatronics_assignment">
+      <div class="card-body">
+        <h2 class="card-title">Mechatroics Assignment</h2>
+        <p>Click here to see Sebastian's Mechatroics Assignment and learn stuff about transistors.</p>
+        <a href="https://sebtheman.github.io/mechatronics-transistor-assignment/" class="button">Click here</a>
       </div>
     </div>
-    -->
-    <div class="memes_soundboard">
-      <h2><a href="https://sebtheman.github.io/memes-website"><span>Sebastian's Memes Soundboard</span></a></h2>
-      <p style="color: white;"><span>Click here to have access to an amazing library of memes</span></p>
+    <br>
+    <div class="card-social-studies-assignment">
+      <div class="card-body">
+        <h2 class="card-title">Social Studies Assignment</h2>
+        <p>Click here to see Sebastian's Social Studies Assignment!</p>
+        <p style="font-weight: bold; color: red;">It got a level 6 so that means it's good :)</p>
+        <a href="https://sebtheman.github.io/social-studies-assignment" class="button">Click here</a>
+      </div>
     </div>
-    <div class="mechatronicsassignment">
-      <h2><a href="https://sebtheman.github.io/mechatronics-transistor-assignment"><span>Mechatronics Assignment</span></a></h2>
-      <p style="color: white;"><span>Click here to see my mechatronics assignment and find out information about the transistor</span></p>
-    </div>
-    <div class="social_studies_assignment">
-      <h2><a href="https://sebtheman.github.io/social-studies-assignment"><span>Social Studies Assignment</span></a></h2>
-      <p style="color: white;"><span>Click here to see my social studies assignment</span></p>
-    </div>
-    <div class="school_work">
-      <h2><a href="https://sebtheman.github.io/school-work"><span>Digital Technology Website</span></a></h2>
-      <p style="color: white;"><span>Click here to see the stuff we are learning in Digital Technologies :)</span></p>
+    <br>
+    <div class="card-digital-technologies-work">
+      <div class="card-body">
+        <h2 class="card-title">Digital Technologies Work</h2>
+        <p>Click here to see what Sebastian did in Year 10 in Digital Technologies for HTML!</p>
+        <a href="https://sebtheman.github.io/social-studies-assignment" class="button">Click here</a>
+      </div>
     </div>
   </div>
 </body>
