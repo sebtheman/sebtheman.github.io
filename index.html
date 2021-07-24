@@ -377,7 +377,7 @@
         </label>
         <b>&nbsp;&nbsp;&nbsp;New Styling</b>
     </div>
-  </center>
+  </center><br>
   <div id="row" class="invisible">
     <div class="memes_soundboard">
       <h2><a href="https://sebtheman.github.io/memes-website"><span>Sebastian's Memes Soundboard</span></a></h2>
@@ -396,7 +396,7 @@
       <p style="color: white;"><span>Click here to see the stuff we are learning in Digital Technologies :)</span></p>
     </div>
   </div>
-  <div id="cards">
+  <div id="cards" class="invisible">
     <div class="card-meme_soundboard">
       <div class="card-body">
         <h2 class="card-title">Sebastian's Meme Soundboard</h2>
@@ -430,28 +430,48 @@
       </div>
     </div>
   </div>
+  <h1 id="loadingText" style="text-align: center;">Loading website...</h1>
   <script>
     window.onload = function() {
       var x = document.getElementById('cards');
       x.className = "visible"
       var x = document.getElementById('row');
       x.className = "invisible";
-      var checkbox = document.getElementById('stylingCheckbox');
-      checkbox.checked = true;
+      if (window.localStorage.getItem("stylingCheckboxState") == "true") {
+        var x = document.getElementById('cards');
+        x.className = "visible";
+        var x = document.getElementById('row');
+        x.className = "invisible";
+        var checkbox = document.getElementById("stylingCheckbox");
+        checkbox.checked = true;
+      }
+      else {
+        var x = document.getElementById('cards');
+        x.className = "invisible";
+        var x = document.getElementById('row');
+        x.className = "visible";
+        var checkbox = document.getElementById("stylingCheckbox");
+        checkbox.checked = false;
+      }
+      var loadingText = document.getElementById("loadingText");
+      loadingText.className = "invisible";
     }
     document.getElementById('stylingCheckbox').addEventListener('click', function() {
     var checkbox = document.getElementById('stylingCheckbox');
-    if (checkbox.checked == true) {
+    window.localStorage.setItem("stylingCheckboxState", checkbox.checked)
+    if (window.localStorage.getItem("stylingCheckboxState") == "true") {
       var x = document.getElementById('cards');
-      x.className = "visible"
+      x.className = "visible";
       var x = document.getElementById('row');
-      x.className = "invisible"
+      x.className = "invisible";
+      window.localStorage.setItem("stylingCheckboxState", checkbox.checked)
     }
     else {
       var x = document.getElementById('cards');
-      x.className = "invisible"
+      x.className = "invisible";
       var x = document.getElementById('row');
-      x.className = "visible"
+      x.className = "visible";
+      window.localStorage.setItem("stylingCheckboxState", checkbox.checked)
     }
 });
   </script>
