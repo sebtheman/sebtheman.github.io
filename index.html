@@ -378,7 +378,7 @@
         <b>&nbsp;&nbsp;&nbsp;New Styling</b>
     </div>
   </center>
-  <div id="row">
+  <div id="row" class="invisible">
     <div class="memes_soundboard">
       <h2><a href="https://sebtheman.github.io/memes-website"><span>Sebastian's Memes Soundboard</span></a></h2>
       <p style="color: white;"><span>Click here to have access to an amazing library of memes</span></p>
@@ -433,12 +433,14 @@
   <script>
     window.onload = function() {
       var x = document.getElementById('cards');
-      x.className = "invisible"
+      x.className = "visible"
       var x = document.getElementById('row');
-      x.className = "visible";
+      x.className = "invisible";
+      var checkbox = document.getElementById('stylingCheckbox');
+      checkbox.checked = true;
     }
     document.getElementById('stylingCheckbox').addEventListener('click', function() {
-    const checkbox = document.getElementById('stylingCheckbox');
+    var checkbox = document.getElementById('stylingCheckbox');
     if (checkbox.checked == true) {
       var x = document.getElementById('cards');
       x.className = "visible"
