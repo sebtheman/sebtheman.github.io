@@ -364,189 +364,44 @@
       border-radius: 50%;
     }
     /*End of switch code*/
-    #js-elements {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-    }
   </style>
 </header>
 <body>
-  <!--
-
-    ADD SUPPORT FOR BROWSERS WITH NO JS
-
-  -->
-  <div id="js-elements">
-    <center>
-      <h1>Sebastian's Websites</h1>
-      <div style="display: flex; align-items: center; align-self: center;justify-content: center;">
-        <b>Old Styling&nbsp;&nbsp;&nbsp;</b>
-          <label class="switch">
-            <input type="checkbox" id="stylingCheckbox">
-            <span class="slider round"></span>
-          </label>
-          <b>&nbsp;&nbsp;&nbsp;New Styling</b>
-      </div>
-    </center><br>
-    <div id="row" class="invisible">
-      <div class="memes_soundboard">
-        <h2><a href="https://sebtheman.github.io/memes-website"><span>Sebastian's Memes Soundboard</span></a></h2>
-        <p style="color: white;"><span>Click here to have access to an amazing library of memes</span></p>
-      </div>
-      <div class="mechatronicsassignment">
-        <h2><a href="https://sebtheman.github.io/mechatronics-transistor-assignment"><span>Mechatronics Assignment</span></a></h2>
-        <p style="color: white;"><span>Click here to see my mechatronics assignment and find out information about the transistor</span></p>
-      </div>
-      <div class="social_studies_assignment">
-        <h2><a href="https://sebtheman.github.io/social-studies-assignment"><span>Social Studies Assignment</span></a></h2>
-        <p style="color: white;"><span>Click here to see my social studies assignment</span></p>
-      </div>
-      <div class="school_work">
-        <h2><a href="https://sebtheman.github.io/school-work"><span>Digital Technology Website</span></a></h2>
-        <p style="color: white;"><span>Click here to see the stuff we are learning in Digital Technologies :)</span></p>
+  <h1 style="text-align: center;">Sebastian's Websites</h1><br>
+  <div id="cards">
+    <div class="card-meme_soundboard">
+      <div class="card-body">
+        <h2 class="card-title">Sebastian's Meme Soundboard</h2>
+        <p>Click here to hear the amazing memes on Sebastian's Meme Soundboard.</p>
+        <a href="https://sebtheman.github.io/memes-website/" class="button">Click here</a>
       </div>
     </div>
-    <div id="cards" class="invisible">
-      <div class="card-meme_soundboard">
-        <div class="card-body">
-          <h2 class="card-title">Sebastian's Meme Soundboard</h2>
-          <p>Click here to hear the amazing memes on Sebastian's Meme Soundboard.</p>
-          <a href="https://sebtheman.github.io/memes-website/" class="button">Click here</a>
-        </div>
-      </div>
-      <br>
-      <div class="card-mechatronics_assignment">
-        <div class="card-body">
-          <h2 class="card-title">Mechatroics Assignment</h2>
-          <p>Click here to see Sebastian's Mechatroics Assignment and learn stuff about transistors.</p>
-          <a href="https://sebtheman.github.io/mechatronics-transistor-assignment/" class="button">Click here</a>
-        </div>
-      </div>
-      <br>
-      <div class="card-social-studies-assignment">
-        <div class="card-body">
-          <h2 class="card-title">Social Studies Assignment</h2>
-          <p>Click here to see Sebastian's Social Studies Assignment!</p>
-          <p style="font-weight: bold; color: red;">It got a level 6 so that means it's good :)</p>
-          <a href="https://sebtheman.github.io/social-studies-assignment" class="button">Click here</a>
-        </div>
-      </div>
-      <br>
-      <div class="card-digital-technologies-work">
-        <div class="card-body">
-          <h2 class="card-title">Digital Technologies Work</h2>
-          <p>Click here to see what Sebastian did in Year 10 in Digital Technologies for HTML!</p>
-          <a href="https://sebtheman.github.io/school-work" class="button">Click here</a>
-        </div>
-      </div>
-    </div>
-    <h1 id="loadingText" style="text-align: center;">Loading website...</h1>
-  </div>
-  <noscript>
-    <style>
-      #js-elements {
-        position: absolute;
-        top: -9999px;
-        left: 0;
-      }
-      body {
-        margin: 0;
-      }
-      #no-js-heading {
-        position: fixed;
-        top: -25px;
-        left: 0;
-        width: 100%;
-        background-color: red;
-        text-align: center;
-        z-index: 10;
-      }
-    </style>
-    <h1 id="no-js-heading">To enable different styling and more functionality, enable JavaScript</h1>
     <br>
-    <h1 style="text-align: center;">Sebastian's Websites</h1>
-    <center>
-      <div id="cards">
-        <div class="card-meme_soundboard">
-          <div class="card-body">
-            <h2 class="card-title">Sebastian's Meme Soundboard</h2>
-            <p>Click here to hear the amazing memes on Sebastian's Meme Soundboard.</p>
-            <a href="https://sebtheman.github.io/memes-website/" class="button">Click here</a>
-          </div>
-        </div>
-        <br>
-        <div class="card-mechatronics_assignment">
-          <div class="card-body">
-            <h2 class="card-title">Mechatroics Assignment</h2>
-            <p>Click here to see Sebastian's Mechatroics Assignment and learn stuff about transistors.</p>
-            <a href="https://sebtheman.github.io/mechatronics-transistor-assignment/" class="button">Click here</a>
-          </div>
-        </div>
-        <br>
-        <div class="card-social-studies-assignment">
-          <div class="card-body">
-            <h2 class="card-title">Social Studies Assignment</h2>
-            <p>Click here to see Sebastian's Social Studies Assignment!</p>
-            <p style="font-weight: bold; color: red;">It got a level 6 so that means it's good :)</p>
-            <a href="https://sebtheman.github.io/social-studies-assignment" class="button">Click here</a>
-          </div>
-        </div>
-        <br>
-        <div class="card-digital-technologies-work">
-          <div class="card-body">
-            <h2 class="card-title">Digital Technologies Work</h2>
-            <p>Click here to see what Sebastian did in Year 10 in Digital Technologies for HTML!</p>
-            <a href="https://sebtheman.github.io/school-work" class="button">Click here</a>
-          </div>
-        </div>
+    <div class="card-mechatronics_assignment">
+      <div class="card-body">
+        <h2 class="card-title">Mechatroics Assignment</h2>
+        <p>Click here to see Sebastian's Mechatroics Assignment and learn stuff about transistors.</p>
+        <a href="https://sebtheman.github.io/mechatronics-transistor-assignment/" class="button">Click here</a>
       </div>
-    </center>
-  </noscript>
-  <script>
-    window.onload = function() {
-      var x = document.getElementById('cards');
-      x.className = "visible"
-      var x = document.getElementById('row');
-      x.className = "invisible";
-      if (window.localStorage.getItem("stylingCheckboxState") == "true") {
-        var x = document.getElementById('cards');
-        x.className = "visible";
-        var x = document.getElementById('row');
-        x.className = "invisible";
-        var checkbox = document.getElementById("stylingCheckbox");
-        checkbox.checked = true;
-      }
-      else {
-        var x = document.getElementById('cards');
-        x.className = "invisible";
-        var x = document.getElementById('row');
-        x.className = "visible";
-        var checkbox = document.getElementById("stylingCheckbox");
-        checkbox.checked = false;
-      }
-      var loadingText = document.getElementById("loadingText");
-      loadingText.className = "invisible";
-    }
-    document.getElementById('stylingCheckbox').addEventListener('click', function() {
-    var checkbox = document.getElementById('stylingCheckbox');
-    window.localStorage.setItem("stylingCheckboxState", checkbox.checked)
-    if (window.localStorage.getItem("stylingCheckboxState") == "true") {
-      var x = document.getElementById('cards');
-      x.className = "visible";
-      var x = document.getElementById('row');
-      x.className = "invisible";
-      window.localStorage.setItem("stylingCheckboxState", checkbox.checked)
-    }
-    else {
-      var x = document.getElementById('cards');
-      x.className = "invisible";
-      var x = document.getElementById('row');
-      x.className = "visible";
-      window.localStorage.setItem("stylingCheckboxState", checkbox.checked)
-    }
-});
-  </script>
+    </div>
+    <br>
+    <div class="card-social-studies-assignment">
+      <div class="card-body">
+        <h2 class="card-title">Social Studies Assignment</h2>
+        <p>Click here to see Sebastian's Social Studies Assignment!</p>
+        <p style="font-weight: bold; color: red;">It got a level 6 so that means it's good :)</p>
+        <a href="https://sebtheman.github.io/social-studies-assignment" class="button">Click here</a>
+      </div>
+    </div>
+    <br>
+    <div class="card-digital-technologies-work">
+      <div class="card-body">
+        <h2 class="card-title">Digital Technologies Work</h2>
+        <p>Click here to see what Sebastian did in Year 10 in Digital Technologies for HTML!</p>
+        <a href="https://sebtheman.github.io/school-work" class="button">Click here</a>
+      </div>
+    </div>
+  </div>
 
 </body>
 </html>
